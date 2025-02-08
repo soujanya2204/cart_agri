@@ -1,0 +1,157 @@
+/* Global Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  background: url(https://www.organicfacts.net/wp-content/uploads/vegetarianfood.jpg)
+    no-repeat center center/cover;
+}
+
+.heading {
+  text-align: center;
+  color: black;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* Dishes Section */
+.dishes {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dishes .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Dish Box */
+.dishes .box-container .box {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.dishes .box-container .box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Icons */
+.dishes .box-container .box .fa-heart,
+.dishes .box-container .box .fa-eye {
+  position: absolute;
+  top: 1rem;
+  background: #fff;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  color: black;
+  text-align: center;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dishes .box-container .box .fa-heart {
+  right: 1rem;
+}
+
+.dishes .box-container .box .fa-eye {
+  left: 1rem;
+}
+
+.dishes .box-container .box .fa-heart:hover,
+.dishes .box-container .box .fa-eye:hover {
+  background: green;
+  color: #fff;
+}
+
+/* Dish Image */
+.dishes .box-container .box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.dishes .box-container .box:hover img {
+  transform: scale(1.05);
+}
+
+/* Dish Name */
+.dishes .box-container .box h3 {
+  color: black;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+/* Stars */
+.dishes .box-container .box .stars {
+  padding: 0.5rem 0;
+}
+
+.dishes .box-container .box .stars i {
+  font-size: 1.4rem;
+  color: green;
+}
+
+/* Price */
+.dishes .box-container .box span {
+  display: block;
+  color: green;
+  font-weight: bolder;
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+}
+
+/* Add to Cart Button */
+.dishes .box-container .box .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: green;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.dishes .box-container .box .btn:hover {
+  background: darkgreen;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dishes {
+    padding: 30px 5%;
+  }
+
+  .dishes .box-container {
+    grid-template-columns: 1fr;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+  }
+}
